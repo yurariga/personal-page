@@ -1,3 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins:wght@200;400;700&display=swap");
+:root {
+  --primary-color: #222222;
+  --styled-font-family: "Krona One", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0.1em 0.5em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  width: 7em;
+  border-radius: 5em;
+}
+header img.logo-hover {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+header img.logo-hover:hover {
+  background-color: black;
+  opacity: 1;
+}
+header nav {
+  margin: 3em;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  gap: 2em;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-family: "Krona One", sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 1.5em;
+  position: relative;
+}
+header nav ul li a:hover {
+  font-weight: bold;
+}
+header nav ul li a:hover:before {
+  width: 35%;
+}
+header nav ul li a:before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 1px;
+  border-bottom: 2px solid rgb(119, 119, 119);
+  bottom: -6px;
+  transition: width 0.3s;
+}
+header nav ul li a.active:before {
+  position: absolute;
+  content: "";
+  width: 35%;
+  height: 1px;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  bottom: -6px;
+}
+
+.intro-container {
+  display: flex;
+  justify-content: space-between;
+}
+.intro-container h1 {
+  font-family: "Krona One", sans-serif;
+  color: black;
+  line-height: 1.5em;
+  font-size: 3.5rem;
+  letter-spacing: 0.1em;
+}
+.intro-container h1 .h1-style-line-1 {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.intro-container p {
+  letter-spacing: 0.3em;
+  color: grey;
+  font-family: "Krona One", sans-serif;
+}
+.intro-container .intro-right img {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 50em;
+  filter: grayscale(90%);
+  transform: scaleX(-1);
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+}
+.about-container img {
+  width: 50em;
+}
+.about-container h2 {
+  font-family: var(--styled-font-family);
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+}
+.about-container .h2-deco {
+  position: absolute;
+  right: 3em;
+  top: 16.5em;
+}
+
 img {
   width: 100px;
 }/*# sourceMappingURL=main.css.map */

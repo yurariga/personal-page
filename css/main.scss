@@ -1,3 +1,174 @@
-img {
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins:wght@200;400;700&display=swap');
+
+:root {
+    --primary-color: #222222;
+    --styled-font-family: 'Krona One', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: .1em .5em;
+}
+
+// *Header section*
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    img {
+        width: 7em;
+        border-radius: 5em;
+
+        &.logo-hover {
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+        }
+
+        &.logo-hover:hover {
+            background-color: black;
+            opacity: 1;
+        }
+    }
+
+    nav {
+        margin: 3em;
+        
+        ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            gap: 2em;
+            
+            li {
+                a {
+                    text-decoration: none;
+                    color: black;
+                    text-transform: uppercase;
+                    font-family: 'Krona One', sans-serif;
+                    letter-spacing: .05em;
+                    font-size: 1.5em;
+                    position: relative;
+
+                    &:hover {
+                        font-weight: bold;
+                    }
+
+                    &:hover:before {
+                        width: 35%;
+                    }
+
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        width: 0%;
+                        height: 1px;
+                        border-bottom: 2px solid rgb(119, 119, 119);
+                        bottom: -6px;
+                        transition: width 0.3s;
+                    }
+
+                    &.active:before {
+                        position: absolute;
+                        content: "";
+                        width: 35%;
+                        height: 1px;
+                        border-bottom: 2px solid rgb(0, 0, 0);
+                        bottom: -6px;
+                    }
+                    
+                }
+            }
+
+        }
+    }
+}
+
+
+// *Main section*
+
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        font-family: 'Krona One', sans-serif;
+        color: black;
+        line-height: 1.5em;
+        font-size: 3.5rem;
+        letter-spacing: .1em;
+        
+
+        .h1-style-line-1 {
+            color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+        }
+        
+    }
+
+    p {
+        letter-spacing: .3em;
+        color: grey;
+        font-family: 'Krona One', sans-serif;
+
+    }
+    
+    .intro-right {
+        img {
+            position: relative;
+            top: 0;
+            right: 0;
+            width: 50em;
+            // -webkit-filter: grayscale(90%);
+            filter: grayscale(90%);
+            // -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            
+        }
+    }
+    
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        width: 50em;
+    }
+
+    h2 {
+        font-family: var(--styled-font-family);
+        font-size: 2.5rem;
+        letter-spacing: .1em;
+    }
+
+    .h2-deco {
+        position: absolute;
+        right: 3em;
+        top: 16.5em
+    }
+}
+
+
+
+// *temp img width*   
+   img {
     width: 100px;
 }
+
